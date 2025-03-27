@@ -18,7 +18,7 @@ class BienvenidaActivity : AppCompatActivity() {
 
         val bundle = intent.extras
 
-        val user = bundle?.getString("user", "Unknow")
+        val user = bundle?.getString("user") ?: "Unknow"
         textViewUser = findViewById<TextView>(R.id.textViewUser)
 
         textViewUser.text = user
