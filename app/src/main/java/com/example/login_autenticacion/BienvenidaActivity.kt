@@ -16,7 +16,9 @@ class BienvenidaActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_bienvenida)
 
-        val user = intent.getStringExtra("user")
+        val bundle = intent.extras
+
+        val user = bundle?.getString("user", "Unknow")
         textViewUser = findViewById<TextView>(R.id.textViewUser)
 
         textViewUser.text = user
